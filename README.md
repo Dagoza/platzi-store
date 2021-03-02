@@ -1,27 +1,36 @@
-# PlatziStore
+# Platzi store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+This application was developed in 5 courses of Angular.
+- Angular (30h)
+- Angular professional (15h)
+- Angular performance (13h)
+- Angular PWA (11h)
+- Angular Forms ()
 
-## Development server
+This project is about building a E-commerce implementing best practices.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Implemented
+- Angular 8+
+    - Obsevable handling
+    - LIFT pattern
+    - Smart, Dumb pattern (Just example)
+    - Lazy loading
+    - Selective loading strategy (PreloadStrategy) and QuicklinkStrategy 
+    - SSR - Server Side Render (Angular Universal)
+    - Implementing ChangeDetection
+- Performance
+    - Webpack-bundle-analyzer
+    - Performance Budget
+    - Lighthouse
+    - Tree shaking
+    - Google Analytics
+- PWA
+    - ServiceWorkers
+    - Cache assets
+    - Push notifications
+- Firebase
+    - Auth
+    - Storage
+    - Hosting
+    - Messagging
+ 
