@@ -7,14 +7,7 @@
       <div class="row">
         <div class="col-xs">
           <mat-form-field>
-            <input placeholder="Id" formControlName="id" matInput type="text">
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs">
-          <mat-form-field>
-            <input placeholder="Title" formControlName="title" matInput type="text">
+            <input placeholder="Name" formControlName="name" matInput type="text">
           </mat-form-field>
         </div>
       </div>
@@ -42,6 +35,20 @@
             <input type="file" (change)="uploadFile($event)">
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <mat-label>Categories</mat-label>
+            <mat-select formControlName="category_id">
+              <mat-option *ngFor="let category of categories" [value]="category._id">
+                {{category.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      
     </mat-card-content>
     <mat-card-actions>
       <button [disabled]="form.invalid" mat-raised-button type="submit">Guardar</button>

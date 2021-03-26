@@ -18,23 +18,23 @@ export class ProductsService {
   ) { }
 
   getAllProducts() {
-    return this.http.get<Product[]>(`${environment.url_api}/products`);
+    return this.http.get<Product[]>(`${environment.url_store_api}/products`);
   }
 
   getProduct(id: string) {
-    return this.http.get<Product>(`${environment.url_api}/products/${id}`);
+    return this.http.get<Product>(`${environment.url_store_api}/products/${id}`);
   }
 
   createProduct(product: Product) {
-    return this.http.post(`${environment.url_api}/products`, product);
+    return this.http.post(`${environment.url_store_api}/products`, product);
   }
 
   updateProduct(id: string, changes: Partial<Product>) {
-    return this.http.put(`${environment.url_api}/products/${id}`, changes);
+    return this.http.put(`${environment.url_store_api}/products/${id}`, changes);
   }
 
   deleteProduct(id: string): Observable<Object> {
-    return this.http.delete(`${environment.url_api}/products/${id}`)
+    return this.http.delete(`${environment.url_store_api}/products/${id}`)
     .pipe(
       retry(3),
       catchError(HandleHttpResponseError)

@@ -11,6 +11,7 @@ import { CartComponent } from './components/cart/cart.component';
 
 import { MaterialModule } from './../material/material.module';
 import { FibonacciPipe } from './pipes/fibonacci.pipe';
+import { StepperComponent } from './components/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FibonacciPipe } from './pipes/fibonacci.pipe';
     HeaderComponent,
     FooterComponent,
     CartComponent,
-    FibonacciPipe
+    FibonacciPipe,
+    StepperComponent
   ],
   exports: [
     ExponentialPipe,

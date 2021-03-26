@@ -5,19 +5,22 @@ This application was developed in 5 courses of Angular.
 - Angular professional (15h)
 - Angular performance (13h)
 - Angular PWA (11h)
-- Angular Forms ()
+- Angular Forms (18h)
 
 This project is about building a E-commerce implementing best practices.
 
 ## Implemented
 - Angular 8+
-    - Obsevable handling
+    - Observable handling
     - LIFT pattern
     - Smart, Dumb pattern (Just example)
     - Lazy loading
     - Selective loading strategy (PreloadStrategy) and QuicklinkStrategy 
     - SSR - Server Side Render (Angular Universal)
     - Implementing ChangeDetection
+    - FormBuilder with FormGroup and FormArray
+    - Custom Validations
+    - CVA Control
 - Performance
     - Webpack-bundle-analyzer
     - Performance Budget

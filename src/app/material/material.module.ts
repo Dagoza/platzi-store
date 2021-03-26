@@ -19,7 +19,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatStepperModule } from '@angular/material/stepper';
-import { MatChipsModule } from '@angular/material/chips';
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [],
@@ -34,8 +38,8 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSelectModule,
     MatRadioModule,
     MatTableModule,
-    MatChipsModule,
     MatSidenavModule,
+    MatCheckboxModule,
     MatListModule,
     MatGridListModule,
     MatMenuModule,
@@ -43,13 +47,18 @@ import { MatChipsModule } from '@angular/material/chips';
     LayoutModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSliderModule,
+    MatProgressBarModule
   ],
   exports: [
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
     MatBadgeModule,
+    MatCheckboxModule,
     MatCardModule,
     MatInputModule,
     MatSelectModule,
@@ -60,11 +69,14 @@ import { MatChipsModule } from '@angular/material/chips';
     MatGridListModule,
     MatMenuModule,
     MatSortModule,
-    MatChipsModule,
     LayoutModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSliderModule,
+    MatProgressBarModule
   ]
 })
 export class MaterialModule { }

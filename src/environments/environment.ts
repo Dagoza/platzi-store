@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   url_api: 'https://platzi-store.herokuapp.com',
+  url_store_api: 'https://store.nicobytes.site/api',
   firebase: {
     apiKey: "AIzaSyCbNMWe-1_0fQlu42aKoFsjIAB0xqaSoQo",
     authDomain: "test-7f779.firebaseapp.com",

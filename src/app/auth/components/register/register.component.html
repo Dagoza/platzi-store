@@ -7,21 +7,59 @@
       <div class="row">
         <div class="col-xs">
           <mat-form-field>
-            <input placeholder="email" formControlName="email" matInput type="email">
+            <mat-label>Email</mat-label>
+            <input placeholder="email" formControlName="email" matInput type="email" autocomplete="off">
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col-xs">
           <mat-form-field>
-            <input placeholder="password" formControlName="password" matInput type="password">
+            <mat-label>Password</mat-label>
+            <input placeholder="password" formControlName="password" matInput type="password" autocomplete="new-password">
+              <mat-error *ngIf="form.get('password').hasError('invalid_password')">
+                Password must have a number.
+              </mat-error>
           </mat-form-field>
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input placeholder="password" formControlName="confirmPassword" matInput 
+            [errorStateMatcher]="errorMatcher"
+            type="password" autocomplete="off">
+            <mat-error *ngIf="form.hasError('match_password')">
+              The passwords are differents.
+            </mat-error>
+          </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-radio-group aria-label="Select an option" formControlName="type">
+                <mat-radio-button value="company">Company</mat-radio-button>
+                <mat-radio-button value="customer">Customer</mat-radio-button>
+            </mat-radio-group>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs">
+              <mat-form-field>
+                <mat-label>Company name</mat-label>
+                <input placeholder="Company" formControlName="companyName" matInput 
+                type="text">
+                <mat-error *ngIf="companyNameField.hasError('required')">
+                  The company is required.
+                </mat-error>
+              </mat-form-field>
+              </div>
+            </div>      
     </mat-card-content>
     <mat-card-actions>
       <button [disabled]="form.invalid" mat-raised-button type="submit">Registro</button>
     </mat-card-actions>
   </mat-card>
-  
+
 </form>

@@ -1,0 +1,46 @@
+<form [formGroup]="form" (ngSubmit)="save()">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Categoría</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input placeholder="Nombre" formControlName="name" matInput type="text">
+              <mat-error *ngIf="nameField.hasError('required')">
+                The field is required.
+              </mat-error>
+              <mat-error *ngIf="nameField.hasError('notAvailable')">
+                These name is already used.
+              </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <label class="btn-upload">
+            <button type="button" mat-raised-button (click)="fileInput.click()">
+              <mat-icon aria-hidden="false" aria-label="Carga de archivo">cloud_upload</mat-icon>
+              Cargar Imagen
+            </button>
+            <input type="file" #fileInput (change)="uploadFile($event)" />
+          </label>
+          <picture>
+            <img *ngIf="imageField.value" [src]="imageField.value" alt="">
+          </picture>
+          <div class="messages" *ngIf="imageField.touched && imageField.invalid">
+            <mat-error *ngIf="imageField.hasError('required')">
+              Este campo es requerido
+            </mat-error>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button type="submit">{{!isNew?'Guardar':'Editar'}} categoría</button>
+    </mat-card-actions>
+  </mat-card>
+
+</form>
